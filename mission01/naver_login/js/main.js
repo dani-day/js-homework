@@ -43,9 +43,7 @@ pw.addEventListener('input', function () {
 
 const loginBtn = document.querySelector('.btn-login');
 loginBtn.addEventListener('click', () => {
-  const email = document.getElementById('userEmail').value;
-  const pw = document.getElementById('userPassword').value;
-  if (emailReg(email) && pwReg(pw)) {
+  if (emailReg(email.value) && pwReg(pw.value)) {
     window.location.href = 'welcome.html';
   } else {
     alert('아이디와 비밀번호를 확인하세용 :p');
