@@ -43,7 +43,7 @@ pw.addEventListener('input', function () {
 
 const loginBtn = document.querySelector('.btn-login');
 loginBtn.addEventListener('click', () => {
-  if (emailReg(email.value) && pwReg(pw.value)) {
+  if (email.value === user.id && pw.value === user.pw) {
     window.location.href = 'welcome.html';
   } else {
     alert('아이디 또는 비밀번호가 일치하지 않습니다.');
