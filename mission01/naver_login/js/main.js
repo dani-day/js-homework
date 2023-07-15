@@ -46,6 +46,6 @@ loginBtn.addEventListener('click', () => {
   if (emailReg(email.value) && pwReg(pw.value)) {
     window.location.href = 'welcome.html';
   } else {
-    alert('아이디와 비밀번호를 확인하세용 :p');
+    alert('아이디 또는 비밀번호가 일치하지 않습니다.');
   }
 });
