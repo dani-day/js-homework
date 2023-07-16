@@ -19,7 +19,7 @@ function emailReg(text) {
 }
 
 function pwReg(text) {
-  const re = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^*+=-]).{6,16}$/;
+  const re = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^*+=-]).{10,16}$/;
   return re.test(String(text).toLowerCase());
 }
 
