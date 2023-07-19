@@ -52,27 +52,34 @@ function validTest(type) {
   }
 }
 
-// Email input 확인
-getNode('#userEmail').addEventListener('input', function () {
-  this.classList.toggle('is--invalid', !validTest('email'));
-});
+function handleEvent() {
+  // Email input 확인
+  getNode('#userEmail').addEventListener('input', function () {
+    this.classList.toggle('is--invalid', !validTest('email'));
+    //> 요 함수 분리하는 것이 좋음
+  });
 
-// Password input 확인
-getNode('#userPassword').addEventListener('input', function () {
-  this.classList.toggle('is--invalid', !validTest('pw'));
-});
+  // Password input 확인
+  getNode('#userPassword').addEventListener('input', function () {
+    this.classList.toggle('is--invalid', !validTest('pw'));
+  });
 
-// 로그인 버튼 클릭 시, 확인
-getNode('.btn-login').addEventListener('click', (e) => {
-  if (validTest('email') && validTest('pw')) {
-    if (checkLogin('email') && checkLogin('pw')) {
-      window.location.href = 'welcome.html';
-    } else {
-      alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+  // 로그인 버튼 클릭 시, 확인
+  getNode('.btn-login').addEventListener('click', (e) => {
+    e.preventDefault();
+    //> 얘는 항상 최상위에 있어야 함.
+
+    if (validTest('email') && validTest('pw')) {
+      if (checkLogin('email') && checkLogin('pw')) {
+        window.location.href = 'welcome.html';
+      } else {
+        alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+      }
     }
-  }
-  e.preventDefault();
-});
+  });
+}
+
+handleEvent();
 
 // * 범쌤 풀이
 
