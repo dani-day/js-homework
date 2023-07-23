@@ -33,7 +33,7 @@ function setImage(target, index) {
   addClass(target, 'is-active');
 }
 
-function setBgColor(index, color1, color2 = '#000') {
+function setBgColor(color1, color2 = '#000') {
   document.body.style.background = `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
 
@@ -59,7 +59,7 @@ function handleSlider(e) {
 
   setImage(target, index);
   setNameText(index);
-  setBgColor(index, color1, color2);
+  setBgColor(color1, color2);
   setAudio(index);
 }
 
