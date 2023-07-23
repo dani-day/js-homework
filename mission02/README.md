@@ -18,7 +18,7 @@
 audio 구현을 위해 audio 태그 추가하였습니다.
 
 ```javascript
-      <audio class="audio" src="/"></audio>
+<audio class="audio" src="/"></audio>
 ```
 
 ---
