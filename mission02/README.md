@@ -47,5 +47,29 @@ function setAudio(index) {}
 function handleSlider(e) {}
 ```
 
+### 2-1. handleSlider 함수
+최초 구현 시 함수마다 변수를 별도로 선언하였으나, target 변수와, index 변수가 중복되어 리팩토링하였습니다.
 
+```javascript
+function handleSlider(e) {
+  const target = e.target.closest('li');
+
+  if (!target) return;
+  const index = attr(target, 'data-index');
+
+  const color1 = data[index - 1].color[0];
+  const color2 = data[index - 1].color[1];
+
+  setImage(target, index);
+  setNameText(index);
+  setBgColor(index, color1, color2);
+  setAudio(index);
+}
+```
+
+### 3. 이벤트리스너
+handlerSlider 함수에 setting 함수를 모두 포함하였기 때문에, 이벤트는 한번만 실행하였습니다.
+```javascript
+navigation.addEventListener('click', handleSlider);
+```
 
