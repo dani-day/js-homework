@@ -70,7 +70,7 @@ function handleSlider(e) {
 
   setImage(target, index);
   setNameText(index);
-  setBgColor(index, color1, color2);
+  setBgColor(color1, color2);
   setAudio(index);
 }
 ```
