@@ -40,11 +40,11 @@ const audio = getNode('.audio');
 navigation 의 클릭 이벤트 시, handleSlider 함수가 실행되며 handleSlider 안에서 setting 함수들을 call 하는 구조입니다.
 
 ```javascript
-function setImage(target, index)
-function setBgColor(index, color1, color2 = '#000')
-function setNameText(index)
-function setAudio(index)
-function handleSlider(e)
+function setImage(target, index) {}
+function setBgColor(index, color1, color2 = '#000') {}
+function setNameText(index) {}
+function setAudio(index) {}
+function handleSlider(e) {}
 ```
 
 
